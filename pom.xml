@@ -55,12 +55,12 @@
             <artifactId>spark-sql-kafka-0-10_${scala.binary.version}</artifactId>
             <version>${spark.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.spark</groupId>
-            <artifactId>spark-hive_${scala.binary.version}</artifactId>
-            <version>${spark.version}</version>
-            <scope>${scope.type}</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.spark</groupId>-->
+<!--            <artifactId>spark-hive_${scala.binary.version}</artifactId>-->
+<!--            <version>${spark.version}</version>-->
+<!--            <scope>${scope.type}</scope>-->
+<!--        </dependency>-->
 <!--        <dependency>-->
 <!--            <groupId>mysql</groupId>-->
 <!--            <artifactId>mysql-connector-java</artifactId>-->
@@ -132,6 +132,13 @@
 <!--            <artifactId>json-smart</artifactId>-->
 <!--            <version>2.4.10</version>-->
 <!--        </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/software.amazon.msk/aws-msk-iam-auth -->
+        <dependency>
+            <groupId>software.amazon.msk</groupId>
+            <artifactId>aws-msk-iam-auth</artifactId>
+            <version>1.1.1</version>
+        </dependency>
 
     </dependencies>
 
