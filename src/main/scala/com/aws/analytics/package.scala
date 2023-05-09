@@ -26,8 +26,6 @@ package object analytics {
       "hoodie.datasource.hive_sync.mode" -> "hms",
       "hoodie.datasource.hive_sync.auto_create_database" -> "true",
       "hoodie.datasource.hive_sync.enable" -> "true",
-      "hoodie.datasource.hive_sync.mode" -> "hms",
-      "hoodie.datasource.hive_sync.auto_create_database" -> "true",
       "hoodie.datasource.hive_sync.database" -> params.syncDB,
       "hoodie.datasource.hive_sync.table" -> params.syncTableName,
       "hoodie.datasource.write.payload.class" -> "org.apache.hudi.common.model.DefaultHoodieRecordPayload"
