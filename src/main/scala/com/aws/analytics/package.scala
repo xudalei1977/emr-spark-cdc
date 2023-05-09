@@ -100,7 +100,7 @@ package object analytics {
 
       try {
         newsDF.write.format("hudi").options(options)
-          .mode(SaveMode.Append)
+          .mode(SaveMode.Overwrite)
           .save(s"${params.hudiBasePath}/${params.syncDB}/${params.syncTableName}")
       } catch {
         case e: Exception => e.printStackTrace

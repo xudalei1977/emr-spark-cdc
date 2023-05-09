@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory
 object MSK2Hudi {
 
   private val log = LoggerFactory.getLogger("MSK2Hudi")
+  private val serialVersionUID = 6529685098267757690L
 
   def main(args: Array[String]): Unit = {
 
