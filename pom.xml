@@ -13,8 +13,8 @@
         <maven-scala-plugin.version>2.10.1</maven-scala-plugin.version>
         <scala-maven-plugin.version>3.2.0</scala-maven-plugin.version>
         <maven-assembly-plugin.version>3.3.0</maven-assembly-plugin.version>
-        <hadoop.version>3.3.3</hadoop.version>
-        <spark.version>3.3.0</spark.version>
+        <hadoop.version>3.4.0</hadoop.version>
+        <spark.version>3.5.2</spark.version>
         <scope.type>compile</scope.type>
         <scala.binary.version>2.12</scala.binary.version>
         <!--compile provided-->

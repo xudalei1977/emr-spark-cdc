@@ -56,8 +56,8 @@ package object analytics {
     if (params.hudiPartition != "") {
       options ++= mutable.Map(
         "hoodie.datasource.write.partitionpath.field" -> params.hudiPartition,
-//        "hoodie.datasource.write.keygenerator.class" -> "org.apache.hudi.keygen.ComplexKeyGenerator",
-//        "hoodie.datasource.write.hive_style_partitioning" -> "true",
+        "hoodie.datasource.write.keygenerator.class" -> "org.apache.hudi.keygen.ComplexKeyGenerator",
+        "hoodie.datasource.write.hive_style_partitioning" -> "true",
         "hoodie.datasource.hive_sync.partition_fields" -> params.hudiPartition,
         "hoodie.datasource.hive_sync.partition_extractor_class" -> "org.apache.hudi.hive.MultiPartKeysValueExtractor"
       )
@@ -100,7 +100,7 @@ package object analytics {
 
       try {
         newsDF.write.format("hudi").options(options)
-          .mode(SaveMode.Overwrite)
+          .mode(SaveMode.Append)
           .save(s"${params.hudiBasePath}/${params.syncDB}/${params.syncTableName}")
       } catch {
         case e: Exception => e.printStackTrace
